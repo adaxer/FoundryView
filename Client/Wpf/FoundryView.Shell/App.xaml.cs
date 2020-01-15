@@ -7,5 +7,6 @@ namespace FoundryView.Client.Wpf.Shell
     /// </summary>
     public partial class App : Application
     {
+        int i =0;
     }
 }
