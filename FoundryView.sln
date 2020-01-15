@@ -7,7 +7,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{EA4C90
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wpf", "Wpf", "{1DAAE17F-EC17-4F39-A985-E5074E508B3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoundryView.Shell", "Client\Wpf\FoundryView.Shell\FoundryView.Shell.csproj", "{F26A5ADC-25DD-495A-AD83-A4D5AC91B254}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoundryView.Shell", "Client\Wpf\FoundryView.Shell\FoundryView.Shell.csproj", "{F26A5ADC-25DD-495A-AD83-A4D5AC91B254}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UseCases", "UseCases", "{CA44BF4B-A750-404B-9599-74CED2671163}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{953C015C-84AA-4326-9051-41919771142D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoundryView.Contracts", "UseCases\FoundryView.Contracts\FoundryView.Contracts.csproj", "{0E1BB5AE-A9C4-430D-ADBF-4EB6DA4DF301}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoundryView.Logic", "UseCases\FoundryView.Logic\FoundryView.Logic.csproj", "{450C1B05-0ABB-4090-BFFC-460FEEAE5838}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoundryView.DataSimulator", "Data\FoundryView.DataSimulator\FoundryView.DataSimulator.csproj", "{770365CC-7774-4D34-81AC-93ACE620C498}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoundryView.DataAccess", "Data\FoundryView.DataAccess\FoundryView.DataAccess.csproj", "{719A6339-40CB-48F2-B1C4-7BC127F00789}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +31,22 @@ Global
 		{F26A5ADC-25DD-495A-AD83-A4D5AC91B254}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F26A5ADC-25DD-495A-AD83-A4D5AC91B254}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F26A5ADC-25DD-495A-AD83-A4D5AC91B254}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E1BB5AE-A9C4-430D-ADBF-4EB6DA4DF301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E1BB5AE-A9C4-430D-ADBF-4EB6DA4DF301}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E1BB5AE-A9C4-430D-ADBF-4EB6DA4DF301}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E1BB5AE-A9C4-430D-ADBF-4EB6DA4DF301}.Release|Any CPU.Build.0 = Release|Any CPU
+		{450C1B05-0ABB-4090-BFFC-460FEEAE5838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{450C1B05-0ABB-4090-BFFC-460FEEAE5838}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{450C1B05-0ABB-4090-BFFC-460FEEAE5838}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{450C1B05-0ABB-4090-BFFC-460FEEAE5838}.Release|Any CPU.Build.0 = Release|Any CPU
+		{770365CC-7774-4D34-81AC-93ACE620C498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{770365CC-7774-4D34-81AC-93ACE620C498}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{770365CC-7774-4D34-81AC-93ACE620C498}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{770365CC-7774-4D34-81AC-93ACE620C498}.Release|Any CPU.Build.0 = Release|Any CPU
+		{719A6339-40CB-48F2-B1C4-7BC127F00789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{719A6339-40CB-48F2-B1C4-7BC127F00789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{719A6339-40CB-48F2-B1C4-7BC127F00789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{719A6339-40CB-48F2-B1C4-7BC127F00789}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -26,6 +54,10 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{1DAAE17F-EC17-4F39-A985-E5074E508B3C} = {EA4C906A-6119-436C-809F-0CD245F71E20}
 		{F26A5ADC-25DD-495A-AD83-A4D5AC91B254} = {1DAAE17F-EC17-4F39-A985-E5074E508B3C}
+		{0E1BB5AE-A9C4-430D-ADBF-4EB6DA4DF301} = {CA44BF4B-A750-404B-9599-74CED2671163}
+		{450C1B05-0ABB-4090-BFFC-460FEEAE5838} = {CA44BF4B-A750-404B-9599-74CED2671163}
+		{770365CC-7774-4D34-81AC-93ACE620C498} = {953C015C-84AA-4326-9051-41919771142D}
+		{719A6339-40CB-48F2-B1C4-7BC127F00789} = {953C015C-84AA-4326-9051-41919771142D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E0A9576B-2F55-47F3-8ED2-0F214134D29F}
