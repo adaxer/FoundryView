@@ -11,6 +11,9 @@ namespace FoundryView.Client.Wpf.Shell
         {
             InitializeComponent();
             int est =0;
+            double dValue = 0.0d;
+            double dValue2 = 0.0d;
+
         }
     }
 }
