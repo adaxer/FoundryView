@@ -3,9 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{EA4C906A-6119-436C-809F-0CD245F71E20}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wpf", "Wpf", "{1DAAE17F-EC17-4F39-A985-E5074E508B3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoundryView.Shell", "Client\Wpf\FoundryView.Shell\FoundryView.Shell.csproj", "{F26A5ADC-25DD-495A-AD83-A4D5AC91B254}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F26A5ADC-25DD-495A-AD83-A4D5AC91B254}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F26A5ADC-25DD-495A-AD83-A4D5AC91B254}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F26A5ADC-25DD-495A-AD83-A4D5AC91B254}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F26A5ADC-25DD-495A-AD83-A4D5AC91B254}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1DAAE17F-EC17-4F39-A985-E5074E508B3C} = {EA4C906A-6119-436C-809F-0CD245F71E20}
+		{F26A5ADC-25DD-495A-AD83-A4D5AC91B254} = {1DAAE17F-EC17-4F39-A985-E5074E508B3C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E0A9576B-2F55-47F3-8ED2-0F214134D29F}
