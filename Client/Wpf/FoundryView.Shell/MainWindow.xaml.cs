@@ -10,6 +10,7 @@ namespace FoundryView.Client.Wpf.Shell
         public MainWindow()
         {
             InitializeComponent();
+            int est =0;
         }
     }
 }
