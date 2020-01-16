@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace FoundryView.Client.Wpf.Shell
+namespace FoundryView.Client.Wpf.Shell.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -10,10 +10,6 @@ namespace FoundryView.Client.Wpf.Shell
         public MainWindow()
         {
             InitializeComponent();
-            int est =0;
-            double dValue = 0.0d;
-            double dValue2 = 0.0d;
-
         }
     }
 }

@@ -19,7 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoundryView.Logic", "UseCas
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoundryView.DataSimulator", "Data\FoundryView.DataSimulator\FoundryView.DataSimulator.csproj", "{770365CC-7774-4D34-81AC-93ACE620C498}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoundryView.DataAccess", "Data\FoundryView.DataAccess\FoundryView.DataAccess.csproj", "{719A6339-40CB-48F2-B1C4-7BC127F00789}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoundryView.DataAccess", "Data\FoundryView.DataAccess\FoundryView.DataAccess.csproj", "{719A6339-40CB-48F2-B1C4-7BC127F00789}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{1DB1306B-F605-4672-8A14-674E339ECA03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoundryView.NorthwindModule", "Client\Wpf\Modules\FoundryView.NorthwindModule\FoundryView.NorthwindModule.csproj", "{6FC720BF-BB5B-49B6-BE92-DBF5DBE14275}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoundryView.InstallationsModule", "Client\Wpf\Modules\FoundryView.InstallationsModule\FoundryView.InstallationsModule.csproj", "{7B678EAD-E5E4-4FE2-BF1A-5A7FA0581774}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +53,14 @@ Global
 		{719A6339-40CB-48F2-B1C4-7BC127F00789}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{719A6339-40CB-48F2-B1C4-7BC127F00789}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{719A6339-40CB-48F2-B1C4-7BC127F00789}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FC720BF-BB5B-49B6-BE92-DBF5DBE14275}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FC720BF-BB5B-49B6-BE92-DBF5DBE14275}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FC720BF-BB5B-49B6-BE92-DBF5DBE14275}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FC720BF-BB5B-49B6-BE92-DBF5DBE14275}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B678EAD-E5E4-4FE2-BF1A-5A7FA0581774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B678EAD-E5E4-4FE2-BF1A-5A7FA0581774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B678EAD-E5E4-4FE2-BF1A-5A7FA0581774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B678EAD-E5E4-4FE2-BF1A-5A7FA0581774}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +72,9 @@ Global
 		{450C1B05-0ABB-4090-BFFC-460FEEAE5838} = {CA44BF4B-A750-404B-9599-74CED2671163}
 		{770365CC-7774-4D34-81AC-93ACE620C498} = {953C015C-84AA-4326-9051-41919771142D}
 		{719A6339-40CB-48F2-B1C4-7BC127F00789} = {953C015C-84AA-4326-9051-41919771142D}
+		{1DB1306B-F605-4672-8A14-674E339ECA03} = {1DAAE17F-EC17-4F39-A985-E5074E508B3C}
+		{6FC720BF-BB5B-49B6-BE92-DBF5DBE14275} = {1DB1306B-F605-4672-8A14-674E339ECA03}
+		{7B678EAD-E5E4-4FE2-BF1A-5A7FA0581774} = {1DB1306B-F605-4672-8A14-674E339ECA03}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E0A9576B-2F55-47F3-8ED2-0F214134D29F}

@@ -1,0 +1,29 @@
+﻿<Window x:Class="FoundryView.Client.Wpf.Shell.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:converters="clr-namespace:FoundryView.Client.Wpf.Shell.Converters"
+        xmlns:viewModels="clr-namespace:FoundryView.Client.Wpf.Shell.ViewModels"
+        mc:Ignorable="d"
+        Title="{Binding Title}" 
+        Left="{Binding UISettings.Left, Mode=TwoWay}" 
+        Height="{Binding UISettings.Height, Mode=TwoWay}"
+        Top="{Binding UISettings.Top, Mode=TwoWay}" 
+        Width="{Binding UISettings.Width, Mode=TwoWay}" d:DesignHeight="269.002" d:DesignWidth="526.783" d:DataContext="{Binding Main, Source={StaticResource VmLoc}}">
+
+    <Window.WindowState>
+        <Binding Path="UISettings.IsMaximized" Mode="TwoWay" Converter="{StaticResource B2Ws}" />
+    </Window.WindowState>
+    <DockPanel>
+        <Border DockPanel.Dock="Bottom" BorderBrush="DarkGray" BorderThickness="1" CornerRadius="8" >
+            <ContentControl Content="{Binding StatusBar}" />
+        </Border>
+        <Border DockPanel.Dock="Left" BorderBrush="DarkGray" BorderThickness="1" CornerRadius="8" >
+            <ContentControl Content="{Binding Navigator}" />
+        </Border>
+        <Border BorderBrush="DarkGray" BorderThickness="1" CornerRadius="8" >
+            <ContentControl Content="{Binding ActiveElement}" />
+        </Border>
+    </DockPanel>
+</Window>

@@ -1,8 +1,21 @@
-﻿<Application x:Class="FoundryView.Client.Wpf.Shell.App"
+﻿<prism:PrismApplication x:Class="FoundryView.Client.Wpf.Shell.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="MainWindow.xaml">
+             xmlns:prism="http://prismlibrary.com/"
+            xmlns:converters="clr-namespace:FoundryView.Client.Wpf.Shell.Converters"
+            xmlns:viewModels="clr-namespace:FoundryView.Client.Wpf.Shell.ViewModels"
+            xmlns:views="clr-namespace:FoundryView.Client.Wpf.Shell.Views">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <converters:BoolToWindowStateConverter x:Key="B2Ws" />
+                    <DataTemplate DataType="{x:Type viewModels:StatusBarViewModel}">
+                        <views:StatusBarView />
+                    </DataTemplate>
+                    <viewModels:DesignViewModelLocator x:Key="VmLoc"/>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
-</Application>
+</prism:PrismApplication>
