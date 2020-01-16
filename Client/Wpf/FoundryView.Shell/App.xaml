@@ -9,10 +9,17 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary>
+                    
                     <converters:BoolToWindowStateConverter x:Key="B2Ws" />
+
                     <DataTemplate DataType="{x:Type viewModels:StatusBarViewModel}">
                         <views:StatusBarView />
                     </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type viewModels:NavigatorViewModel}">
+                        <views:NavigatorView />
+                    </DataTemplate>
+
                     <viewModels:DesignViewModelLocator x:Key="VmLoc"/>
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>

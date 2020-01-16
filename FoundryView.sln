@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoundryView.NorthwindModule
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoundryView.InstallationsModule", "Client\Wpf\Modules\FoundryView.InstallationsModule\FoundryView.InstallationsModule.csproj", "{7B678EAD-E5E4-4FE2-BF1A-5A7FA0581774}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCommonLib", "Client\Wpf\WpfCommonLib\WpfCommonLib.csproj", "{85A94FB7-5716-4EFD-A5C5-3D1CD0243FAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{7B678EAD-E5E4-4FE2-BF1A-5A7FA0581774}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B678EAD-E5E4-4FE2-BF1A-5A7FA0581774}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B678EAD-E5E4-4FE2-BF1A-5A7FA0581774}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85A94FB7-5716-4EFD-A5C5-3D1CD0243FAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85A94FB7-5716-4EFD-A5C5-3D1CD0243FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85A94FB7-5716-4EFD-A5C5-3D1CD0243FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85A94FB7-5716-4EFD-A5C5-3D1CD0243FAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +81,7 @@ Global
 		{1DB1306B-F605-4672-8A14-674E339ECA03} = {1DAAE17F-EC17-4F39-A985-E5074E508B3C}
 		{6FC720BF-BB5B-49B6-BE92-DBF5DBE14275} = {1DB1306B-F605-4672-8A14-674E339ECA03}
 		{7B678EAD-E5E4-4FE2-BF1A-5A7FA0581774} = {1DB1306B-F605-4672-8A14-674E339ECA03}
+		{85A94FB7-5716-4EFD-A5C5-3D1CD0243FAD} = {1DAAE17F-EC17-4F39-A985-E5074E508B3C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E0A9576B-2F55-47F3-8ED2-0F214134D29F}

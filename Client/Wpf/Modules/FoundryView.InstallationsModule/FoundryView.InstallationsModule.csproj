@@ -12,4 +12,12 @@
     <PackageReference Include="PropertyChanged.Fody" Version="3.2.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\WpfCommonLib\WpfCommonLib.csproj" />
+  </ItemGroup>
+
 </Project>

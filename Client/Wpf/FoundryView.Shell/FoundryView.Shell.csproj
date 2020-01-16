@@ -9,14 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Prism.Unity" Version="7.2.0.1422" />
     <PackageReference Include="PropertyChanged.Fody" Version="3.2.4" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\UseCases\FoundryView.Logic\FoundryView.Logic.csproj" />
     <ProjectReference Include="..\Modules\FoundryView.InstallationsModule\FoundryView.InstallationsModule.csproj" />
     <ProjectReference Include="..\Modules\FoundryView.NorthwindModule\FoundryView.NorthwindModule.csproj" />
+    <ProjectReference Include="..\WpfCommonLib\WpfCommonLib.csproj" />
   </ItemGroup>
 
 </Project>
