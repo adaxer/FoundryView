@@ -4,6 +4,7 @@ using FoundryView.Client.Wpf.Modules.NorthwindModule;
 using FoundryView.Client.Wpf.Shell.Services;
 using FoundryView.Client.Wpf.Shell.ViewModels;
 using FoundryView.Client.Wpf.Shell.Views;
+using FoundryView.Data.DataAccess;
 using FoundryView.UseCases.Logic;
 using Prism.Ioc;
 using Prism.Modularity;
@@ -46,6 +47,7 @@ namespace FoundryView.Client.Wpf.Shell
             moduleCatalog.AddModule<NorthwindInitializer>();
             moduleCatalog.AddModule<InstallationsInitializer>();
             moduleCatalog.AddModule<LogicInitializer>();
+            moduleCatalog.AddModule<DataAccessInitializer>();
         }
     }
 }

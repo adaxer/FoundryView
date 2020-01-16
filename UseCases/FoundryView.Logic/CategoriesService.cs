@@ -8,13 +8,15 @@ namespace FoundryView.UseCases.Logic
 {
     public class CategoriesService : ICategoriesService
     {
+        private readonly IRepository<Category> _categoryRepository;
+
+        public CategoriesService(IRepository<Category> categoryRepository)
+        {
+            this._categoryRepository = categoryRepository;
+        }
         public Task<IEnumerable<Category>> GetCategories()
         {
-            return Task.FromResult(new List<Category>
-            {
-                new Category {Id = 1, Name = "IFM9", Description = "18MW Melting Furnace"},
-                new Category {Id = 2, Name = "FS6", Description = "6MW Smart Melting Furnace"}
-            } as IEnumerable<Category>);
+            return _categoryRepository.FindAll();
         }
     }
 }

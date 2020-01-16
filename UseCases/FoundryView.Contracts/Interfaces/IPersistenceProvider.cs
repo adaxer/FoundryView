@@ -4,19 +4,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using FoundryView.UseCases.Contracts.Models;
 
 namespace FoundryView.UseCases.Contracts.Interfaces
 {
-    public interface IRepository<T> where T : ModelBase
+    public interface IPersistenceProvider<T> where T : class
     {
-        Task<T> AddOrUpdate(T entity);
+        Task<T> AddOrUpdate(T entity, Func<T, T, bool> compare);
 
         Task<bool> Delete(T entity);
 
-        Task<IEnumerable<T>> FindAll();
+        Task<IEnumerable<T>> Find(Expression<Func<T, bool>> filter=null);
 
-        Task<T> FindById(int id);
+        Task<bool> Save();
     }
 
 }

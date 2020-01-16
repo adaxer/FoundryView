@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace FoundryView.Data.DataAccess
 {
-    public class GenericRepository<T> : IRepository<T> where T:class
+    public class GenericPersistenceProvider<T> : IPersistenceProvider<T> where T:class
     {
         readonly NorthwindContext _context;
 
-        public GenericRepository(NorthwindContext uow)
+        public GenericPersistenceProvider(NorthwindContext uow)
         {
-            _context = uow;// as ISouthwindDb;
+            _context = uow;
         }
 
         public virtual async Task<T> AddOrUpdate(T entity, Func<T, T, bool>compare)
