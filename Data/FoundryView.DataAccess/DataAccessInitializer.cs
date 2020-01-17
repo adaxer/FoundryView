@@ -29,7 +29,8 @@ namespace FoundryView.Data.DataAccess
             {
                 cfg.CreateMap<Categories, Category>()
                     .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.CategoryId))
-                    .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.CategoryName));
+                    .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.CategoryName))
+                    .ReverseMap();
             });
             config.AssertConfigurationIsValid();
             return config;
