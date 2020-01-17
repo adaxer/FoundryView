@@ -23,7 +23,7 @@ namespace FoundryView.Data.DataAccess
             containerRegistry.RegisterInstance<IMapper>(new Mapper(GetMapperConfiguration()));
         }
 
-        private IConfigurationProvider GetMapperConfiguration()
+        public static IConfigurationProvider GetMapperConfiguration()
         {
             var config = new MapperConfiguration(cfg =>
             {

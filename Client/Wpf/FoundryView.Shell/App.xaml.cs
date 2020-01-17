@@ -1,14 +1,17 @@
-﻿using System.Windows;
+﻿using System.IO;
+using System.Windows;
 using FoundryView.Client.Wpf.Modules.InstallationsModule;
 using FoundryView.Client.Wpf.Modules.NorthwindModule;
 using FoundryView.Client.Wpf.Shell.Services;
 using FoundryView.Client.Wpf.Shell.ViewModels;
 using FoundryView.Client.Wpf.Shell.Views;
 using FoundryView.Data.DataAccess;
+using FoundryView.Services.CommonServiceLib;
+using FoundryView.UseCases.Contracts.Interfaces;
 using FoundryView.UseCases.Logic;
+using Microsoft.Extensions.Configuration;
 using Prism.Ioc;
 using Prism.Modularity;
-using Prism.Mvvm;
 using Prism.Unity;
 
 namespace FoundryView.Client.Wpf.Shell
@@ -19,10 +22,26 @@ namespace FoundryView.Client.Wpf.Shell
     public partial class App : PrismApplication
     {
         private MainWindow _shell;
+        private IConfigurationRoot _configuration;
+        private bool _isOnline;
+
+        public App()
+        {
+            _configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .Build();
+            _isOnline = _configuration.GetValue<bool>("UseRestApi");
+        }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterSingleton<ISettingsService, WpfSettingsService>();
+            if (_isOnline)
+            {
+                containerRegistry.Register<ICategoriesService, RestCategoriesService>();
+                containerRegistry.RegisterInstance<IRestService>(new RestService(_configuration.GetValue<string>("ServiceUrl")));
+            }
         }
 
         protected override Window CreateShell()
@@ -46,8 +65,11 @@ namespace FoundryView.Client.Wpf.Shell
         {
             moduleCatalog.AddModule<NorthwindInitializer>();
             moduleCatalog.AddModule<InstallationsInitializer>();
-            moduleCatalog.AddModule<LogicInitializer>();
-            moduleCatalog.AddModule<DataAccessInitializer>();
+            if (!_isOnline)
+            {
+                moduleCatalog.AddModule<LogicInitializer>();
+                moduleCatalog.AddModule<DataAccessInitializer>();
+            }
         }
     }
 }

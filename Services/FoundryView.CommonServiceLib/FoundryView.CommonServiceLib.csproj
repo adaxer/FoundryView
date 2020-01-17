@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>FoundryView.Services.CommonServiceLib</AssemblyName>
+    <RootNamespace>FoundryView.Services.CommonServiceLib</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\UseCases\FoundryView.Contracts\FoundryView.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
